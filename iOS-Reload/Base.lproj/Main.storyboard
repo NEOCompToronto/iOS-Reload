@@ -48,17 +48,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cg1-D7-xpM">
-                                <rect key="frame" x="67" y="239" width="240" height="235"/>
+                                <rect key="frame" x="20" y="239" width="335" height="235"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="235" id="mS2-hC-j7y"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="assetBalanceCell" id="952-aR-Xq4">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="287" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="952-aR-Xq4" id="yP6-f3-Lo3">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-H7-Jn8">
@@ -101,9 +101,9 @@
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="80" id="M9E-T1-dIg"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
                             <constraint firstItem="tbp-ah-qrg" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="25.5" id="UT0-QI-86W"/>
-                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="Cg1-D7-xpM" secondAttribute="trailing" constant="68" id="eOH-sR-2cN"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="Cg1-D7-xpM" secondAttribute="trailing" constant="20" id="eOH-sR-2cN"/>
                             <constraint firstItem="Cg1-D7-xpM" firstAttribute="top" secondItem="tbp-ah-qrg" secondAttribute="bottom" constant="49" id="i9v-6I-1u9"/>
-                            <constraint firstItem="Cg1-D7-xpM" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="67" id="lIK-Tj-7Sx"/>
+                            <constraint firstItem="Cg1-D7-xpM" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="lIK-Tj-7Sx"/>
                             <constraint firstItem="tbp-ah-qrg" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="102" id="mna-s5-crq"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="tbp-ah-qrg" secondAttribute="trailing" constant="102" id="pOc-Va-hme"/>
                             <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
