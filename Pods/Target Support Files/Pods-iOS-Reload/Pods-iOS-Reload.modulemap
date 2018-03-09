@@ -1,0 +1,6 @@
+framework module Pods_iOS_Reload {
+  umbrella header "Pods-iOS-Reload-umbrella.h"
+
+  export *
+  module * { export * }
+}
