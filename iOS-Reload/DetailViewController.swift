@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var assetsTable: UITableView!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var assetBalances = [String: UInt64]()
+    var assetBalances = [String: Double]()
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -79,7 +79,7 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         if let assetCell = sender.superview?.superview as? UITableViewCell {
             if let indexPath = assetsTable.indexPath(for: assetCell) {
                 if let amountField = assetCell.contentView.viewWithTag(999) as? UITextField {
-                    if let text = amountField.text, let amount = UInt64(text) {
+                    if let text = amountField.text, let amount = Double(text) {
                         print("send \(amount) from asset \(indexPath.row)")
                         
                         if let detail = self.detailItem {
@@ -125,7 +125,7 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         let assetId = Array(assetBalances)[indexPath.row].key
         let name = assetNameFrom(id: assetId)
         let balance = Array(assetBalances)[indexPath.row].value
-        cell.textLabel?.text = name + ": \(balance)"
+        cell.textLabel?.text = String.localizedStringWithFormat("%@: %.2f", name, balance)
         return cell
     }
 }

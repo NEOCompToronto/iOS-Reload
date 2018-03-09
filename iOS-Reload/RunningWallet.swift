@@ -49,7 +49,7 @@ class RunningWallet: NSObject {
         }
     }
     
-    func getBalance(completion: @escaping (_ assetBalances: Dictionary<String, UInt64>?, _ error: Error?) -> Void ) {
+    func getBalance(completion: @escaping (_ assetBalances: Dictionary<String, Double>?, _ error: Error?) -> Void ) {
         let parameters: Parameters = [
             "jsonrpc": "2.0",
             "method": "getaccountstate",
@@ -66,10 +66,10 @@ class RunningWallet: NSObject {
                                 let json = JSON(value)
                                 print("JSON: \(json)")
                                 if let balances = json["result"]["balances"].array {
-                                    var assetBalances = [String: UInt64]()
+                                    var assetBalances = [String: Double]()
                                     for asset in balances {
                                         if let name = asset["asset"].string, let balance = asset["value"].string {
-                                            assetBalances[name] = UInt64(balance)
+                                            assetBalances[name] = Double(balance)
                                         }
                                     }
                                     completion(assetBalances, nil)
@@ -84,7 +84,7 @@ class RunningWallet: NSObject {
         }
     }
 
-    func sendAsset(_ assetId: String, amount: UInt64, to address: String, completion: @escaping (_ success: Bool, _ error: Error?) -> Void ) {
+    func sendAsset(_ assetId: String, amount: Double, to address: String, completion: @escaping (_ success: Bool, _ error: Error?) -> Void ) {
         let parameters: Parameters = [
             "jsonrpc": "2.0",
             "method": "sendtoaddress",
